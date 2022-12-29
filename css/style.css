@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Ubuntu:wght@700&display=swap');
+.red{
+    background-color: red;
+}
+.bcolor{
+    background-color: #225470;
+}
+.uf{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:0.8em;
+}
+.fontubuntu{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.fontport{
+    font-family: 'Port Lligat Sans', sans-serif;
+}
+.navbar-brand{
+    font-size: 3em;
+    font-family: 'Ubuntu', sans-serif;
+ color: red;
+ 
+}
+.white{
+    color: white;
+}
+.remove-marginpadding{
+    margin: 0;
+    padding: 0;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.vidparent{
+    position: relative;
+}
+.vid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #225470;
+    z-index: 1;
+    opacity: 0.8;
+
+}
+.welcomehead{
+    position: absolute;
+    z-index: 12;
+    top: 35%;
+    left: 10%;
+}
+
+.red{
+    color: red;
+}
+.reddiv{
+    background-color: rgb(244, 58, 58);
+    height:2.5em;
+    
+}
+.popularcourse{
+    font-family: 'Baloo Bhai 2', cursive;
+/* font-size: 3em; */
+margin: auto;
+}
+.course{
+    color: white;
+    margin: auto;
+   padding-top: 0.5em;
+}
+.pricetag{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.5em;
+
+}
+.enrolbtn{
+    position: relative;
+    bottom: 1em;
+    
+    margin-top: 1em;
+}
+.col:hover{
+   box-shadow: 0 0 3em black;
+   transform: scale(1.03,1.03);
+}
+.formwidth{
+    width:50em;
+}
+.feedbackdiv{
+    margin-top: 5em;
+    background-color: #225470;
+}
+.resize{
+    background-image: url('../images/nature.png');
+    background-size: contain;
+    height:60em;
+    width: 100%;
+ }
+
+
+@media  screen and (min-width:0px) and (max-width:700px) {
+    .welcomehead{
+        display: none;
+    }
+    .navbar-brand{
+        font-size: 2em;     
+    }
+    .tag{
+        font-size: 0.8em;
+    }
+    video{
+        height: 100%;
+        width: 100%;
+    }
+    .bg{
+        background-color:#225470;
+    }
+    
+    .course{
+        color:white;
+        margin: auto;
+       padding-top: 0.8em;
+    }
+    .font10{
+        font-size: 0.7em;
+    }
+    .popularcourse{
+        font-size: 2em;
+    }
+    .reddiv{
+        height:3em;
+    }
+   
+}
+
+
