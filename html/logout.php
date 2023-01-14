@@ -1,10 +1,29 @@
 <?php
+
 session_start();
 
-session_unset();
 
-session_destroy();
+if(isset($_SESSION["is_login"])){
+   
+    session_unset();
+    
+    session_destroy();
+    
+    echo "0";
+}
 
-echo "0";
+
+if(isset($_SESSION["admin_login"])){
+   
+    session_unset();
+    
+    session_destroy();
+    
+    echo "1";
+}
+
+
+
+
 
 ?>

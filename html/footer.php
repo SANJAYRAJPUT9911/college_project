@@ -31,7 +31,7 @@
             <a target="_blank" href="https://www.instagram.com/_sanju_r_"><i class="fa-brands fa-square-instagram"></i></a>
           </div>
         </div>
-        <p class="copyright">Buzz!t © 2023 | Designed By Sanjay <a href="#" data-bs-toggle="modal" data-bs-target="#login">Admin login</a></p>
+        <p class="copyright">Buzz!t © 2023 | Designed By Sanjay <a href="#" data-bs-toggle="modal" data-bs-target="#signup">Admin login</a></p>
       </div>
     </footer>
   </div>

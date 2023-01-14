@@ -40,7 +40,7 @@
 
 <!-- login form start -->
 <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
@@ -74,21 +74,35 @@
 <!-- login form end -->
 
 <!-- admin form login start-->
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="adminlogin" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="loginLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="loginLabel">Admin Login</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        this is manin div
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <form class="container " id="adminloginform">
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><i class="fa-solid fa-envelope"></i> Email address</label>
+            <input type="email" class="form-control" id="adminmail" placeholder="name@example.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-key"></i> New Password</label>
+            <input type="Password" placeholder="password" class="form-control" id="adminpassword" aria-describedby="emailHelp">
+
+          </div>
+
+          <div class="modal-footer">
+            <div id="adminloginspinner"></div>
+            <div id="adminloginresponse"></div>
+            <button type="button" class="btn btn-primary" id="adminloginbtn">Login</button>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
-</div>
-<!-- admin form login end -->
+  <!-- admin form login end -->

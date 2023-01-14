@@ -135,6 +135,10 @@ margin: auto;
     .reddiv{
         height:3em;
     }
+   .adminlogout{
+    background-color: red;
+    color: red;
+   }
    
 }
 

@@ -157,7 +157,56 @@ $(document).ready(function () {
 })
 
 
-// logout session code
+// ajax code for the admin login
+
+$(document).ready(()=>{
+    $("#adminloginbtn").click(()=>{
+        let cusmail = $('#adminmail').val();
+        let cuspass = $('#adminpassword').val();
+
+        let mydata = { cusemail: cusmail, pass: cuspass };
+        console.log(cusmail);
+
+        $.ajax({
+            url:"./html/adminlog.php",
+            method:"post",
+            data:JSON.stringify(mydata),
+            success:(data)=>{
+                if (data == 0) {
+
+
+
+                    $("#loginresponse").html('<small style="color:red">login failed ,username password is invalid</small>');
+                    $("#loginform")[0].reset();
+
+                }
+                else if (data == 1) {
+                    $("#adminloginspinner").addClass("spinner-border text-success");
+                    $("#adminloginresponse").html('<small style="color:green" >login success</small>');
+                    $("#adminloginform")[0].reset();
+                    setTimeout(() => {
+                        window.location.href = ("./html/adminpage.php");
+                    }, 1000);
+
+
+                }
+                else {
+                    null;
+                }
+            }
+        })
+
+
+    })
+})
+
+
+
+
+
+
+
+// public logout session code
 $(document).ready(() => {
     $("#logoutbtn").click(() => {
 
@@ -166,12 +215,40 @@ $(document).ready(() => {
             method: "POST",
             success: (data) => {
                 if (data == 0) {
-                    console.log(data);
                     window.location.assign("./index.php");
                 }
             }
         })
     })
 })
+
+
+
+
+
+
+// admin logout 
+
+$(document).ready(() => {
+    $("#lgbtn").click(() => {
+
+        $.ajax({
+            url: "../html/logout.php",
+            method: "POST",
+            success: (data) => {
+                if (data == 1) {
+                    window.history.go(-1);
+
+                }
+            }
+        })
+    })
+})
+
+
+
+
+
+
 
 
