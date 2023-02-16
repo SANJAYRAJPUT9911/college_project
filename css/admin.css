@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Ubuntu:wght@700&display=swap');
+
+.home{
+    font-family: 'Port Lligat Sans', sans-serif;
+    color: black;
+    font-size: 3vh;
+    position: relative;
+    left: 2vh;
+}
+.adminnav{   
+background-color: rgb(89, 212, 212);
+border-radius: 30px;
+position:relative;
+top: 2vh;
+z-index: 1;
+height: 7vh;
+}
+
+.decnone{
+    text-decoration: none;
+}
+
+
+.fontport{
+    font-family: 'Baloo Bhai 2', cursi;
+    display: grid;
+}
+.anime{
+    position: relative;
+    top: 1vh;
+
+}
+
+.anime:hover{
+transform: scale(1.1);
+}
+.relate{
+    position: relative;
+    top: 3vh;
+    left: 3vh;
+}
+/* #lgbtnn{
+    position: relative;
+    left: 105vh;
+    top: 1.5vh;
+    height: 4.2vh;
+} */

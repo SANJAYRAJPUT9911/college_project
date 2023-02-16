@@ -119,8 +119,19 @@ if(! isset ($_SESSION)){
       <div class="welcomehead">
         <h1 class="fontubuntu">Welcome To Buzz!t</h1>
         <span class="fontubuntu">Think out of the box</span><br>
-        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</a>
-        <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signup">Signup</a>
+        <?php
+        if(isset($_SESSION['is_login'])){
+          echo ''
+        ;
+
+        }
+        else{
+          echo ' <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+<a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signup">Signup</a>';
+        }
+        
+        ?>
+       
       </div>
     </div>
   </div>

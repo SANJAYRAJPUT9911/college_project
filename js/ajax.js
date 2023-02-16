@@ -227,23 +227,6 @@ $(document).ready(() => {
 
 
 
-// admin logout 
-
-$(document).ready(() => {
-    $("#lgbtn").click(() => {
-
-        $.ajax({
-            url: "../html/logout.php",
-            method: "POST",
-            success: (data) => {
-                if (data == 1) {
-                    window.history.go(-1);
-
-                }
-            }
-        })
-    })
-})
 
 
 
