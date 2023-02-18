@@ -11,9 +11,7 @@ $(document).ready(() => {
             method: "POST",
             success: (data) => {
                 if (data == 1) {
-                  
-                    console.log('log out button ');
-                
+                      window.history.go(-1);            
                         }
                     }
                 })

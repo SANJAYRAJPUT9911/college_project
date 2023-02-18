@@ -24,14 +24,14 @@ session_start();
   <div class="container adminnav ">
 
     <div class="d-flex">
-      <a class="home decnone" href="./index.php">
+      <a class="home decnone" href="../index.php">
         <h1 class="fontport anime">Buzz!t</h1>
       </a>
       <small class="relate">Admin Area</small>
     </div>
   </div>
 
-  <div class="container ">
+  <div class="container-fluid ">
     <div class="row my-5">
 
 
@@ -42,7 +42,7 @@ session_start();
                 <nav class="sidebar-sticky">
                   <ul class="nav my-5 ">
                     <li class="nav-item ">
-                      <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
+                      <a class="decnone" href="./admindash/dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
@@ -66,36 +66,3 @@ session_start();
               }
 
 ?>
-
-
-
-<div class="col-sm-8">
-  <nav>
-    <ul class="nav my-5">
-      <li class="nav-item">
-        <?php
-
-        if (isset($_SESSION["admin_login"])) {
-          echo "<h1>you are loged in </h1>";
-        } else {
-          echo "<h1>you are logout  </h1>";
-        }
-
-        ?> </li>
-    </ul>
-  </nav>
-</div>
-
-
-
-<!-- font awesone js -->
-<script src="../js/adminawesfont.js"></script>
-
-<script src="../js/adminjquery.js"></script>
-<script src="../js/adminlgbtn.js"></script>
-<!-- bootstrap js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>

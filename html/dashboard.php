@@ -24,22 +24,22 @@ session_start();
   <div class="container adminnav ">
 
     <div class="d-flex">
-      <a class="home decnone" href="./index.php">
+      <a class="home decnone" href="../index.php">
         <h1 class="fontport anime">Buzz!t</h1>
       </a>
       <small class="relate">Admin Area</small>
     </div>
   </div>
 
-  <div class="container ">
+  <div class="container  ">
     <div class="row my-5">
 
 
-<?php 
-              if (isset($_SESSION["admin_login"])) {
+      <?php
+      if (isset($_SESSION["admin_login"])) {
 
-                echo ' <div class="col-sm-3  m-3 px-5 ">
-                <nav class="sidebar-sticky">
+        echo ' <div class="col-sm-3   ">
+                <nav class="sidebar-sticky ">
                   <ul class="nav my-5 ">
                     <li class="nav-item ">
                       <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
@@ -55,46 +55,59 @@ session_start();
                   </ul>
                 </nav>
         
-        
-        
-        
-        
               </div>
+
+              <div class="col-sm-3 ">
+              <div class="card text-center">
+              <div class="card-header bg-danger">
+              <small> card 1</small>
+              </div>
+              <div class="card-body bg-danger">
+              h1
+              </div>
+              </div>
+              </div>
+
+
+          <div class="col-sm-3 ">
+          <div class="card text-center">
+          <div class="card-header">
+          <small> card 2</small>           
+          </div>
+          <div class="card-body">           
+          </div>
+          </div>
+          </div>
+
+        <div class="col-sm-3 ">        
+        <div class="card text-center">
+        <div class="card-header">
+        <small> card 2</small>      
+        </div>
+        <div class="card-body">        
+        </div>
+        </div>
+        </div>
+
+
         ';
+      }
 
-
-              }
-
-?>
-
-
-
-<div class="col-sm-8">
-  <nav>
-    <ul class="nav my-5">
-      <li class="nav-item">
-        <?php
-
-        if (isset($_SESSION["admin_login"])) {
-          echo "<h1>you are loged in </h1>";
-        } else {
-          echo "<h1>you are logout  </h1>";
-        }
-
-        ?> </li>
-    </ul>
-  </nav>
-</div>
+      ?>
 
 
 
-<!-- font awesone js -->
-<script src="../js/adminawesfont.js"></script>
 
-<script src="../js/adminjquery.js"></script>
-<script src="../js/adminlgbtn.js"></script>
-<!-- bootstrap js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+      <!-- font awesone js -->
+      <script src="../js/adminawesfont.js"></script>
+
+      <script src="../js/adminjquery.js"></script>
+      <script src="../js/adminlgbtn.js"></script>
+      <!-- bootstrap js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

@@ -112,7 +112,7 @@ if(! isset ($_SESSION)){
   <div class="container-fluid remove-marginpadding">
     <div class="vidparent">
       <video autoplay muted loop>
-        <source src="videos/letters.mp4">
+        <source src="videos/nature.mp4">
       </video>
       <div class="vid-overlay"></div>
       <!-- welcom text  -->
