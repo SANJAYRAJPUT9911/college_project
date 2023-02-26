@@ -63,7 +63,8 @@ session_start();
               <small> card 1</small>
               </div>
               <div class="card-body bg-danger">
-              h1
+              <h1>5</h1><br>
+              <a href="" class="decnone">view</a>
               </div>
               </div>
               </div>
@@ -71,20 +72,24 @@ session_start();
 
           <div class="col-sm-3 ">
           <div class="card text-center">
-          <div class="card-header">
+          <div class="card-header bg-success">
           <small> card 2</small>           
           </div>
-          <div class="card-body">           
+          <div class="card-body bg-success">     
+          <h1>25</h1><br>
+          <a href="" class="decnone">view</a>      
           </div>
           </div>
           </div>
 
         <div class="col-sm-3 ">        
-        <div class="card text-center">
+        <div class="card text-center bg-info">
         <div class="card-header">
         <small> card 2</small>      
         </div>
-        <div class="card-body">        
+        <div class="card-body bg-info">  
+        <h1>20</h1><br>
+        <a href="" class="decnone">view</a>      
         </div>
         </div>
         </div>
