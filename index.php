@@ -231,7 +231,7 @@ if(! isset ($_SESSION)){
   </div>
   <!-- view all course button start -->
   <div class="d-flex justify-content-center  m-5">
-    <a href="#" class="btn btn-outline-danger enrolbtn">view all course</a>
+    <a href="./html/courses.php" class="btn btn-outline-danger enrolbtn">view all course</a>
   </div>
   <!-- contact us text -->
   <div class="d-flex justify-content-center  m-5">

@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-session_start();
+
+
+  
+<?php 
+if(! isset ($_SESSION)){
+
+  session_start();
+
+}
 
 ?>
 
@@ -34,72 +41,117 @@ session_start();
   <div class="container  ">
     <div class="row my-5">
 
+      <?php 
+      if(isset($_SESSION['admin_login'])){
+       echo 
+       
+       '
+      <div class="col-sm-3 ">
+        <nav class="sidebar-sticky ">
+          <ul class="nav my-5 ">
+            <li class="nav-item ">
+              <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
+              <a class="decnone" href="./admincourse.php"><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-chart-simple"></i> Sell Report</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-brands fa-paypal"></i> Payment Status</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-comment"></i> Feedback</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
+              <a class="decnone" href="" id="lgbtnn"><i class="fa-solid fa-right-from-bracket"></i>
+                Logout</a><br><br><br>
+            </li>
+          </ul>
+        </nav>
 
-      <?php
-      if (isset($_SESSION["admin_login"])) {
+      </div>
 
-        echo ' <div class="col-sm-3   ">
-                <nav class="sidebar-sticky ">
-                  <ul class="nav my-5 ">
-                    <li class="nav-item ">
-                      <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-chart-simple"></i> Sell Report</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-brands fa-paypal"></i> Payment Status</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-comment"></i> Feedback</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
-                      <a class="decnone" href="" id="lgbtnn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a><br><br><br>
-                    </li>
-                  </ul>
-                </nav>
-        
-              </div>
+      <div class="col-sm-9 ">
 
-              <div class="col-sm-3 ">
-              <div class="card text-center">
+        <div class="d-flex">
+
+
+
+
+          <div class="col-sm-4  h-25 px-2">
+            <div class="card text-center">
               <div class="card-header bg-danger">
-              <small> card 1</small>
+                <small>Courses</small>
               </div>
               <div class="card-body bg-danger">
-              <h1>5</h1><br>
-              <a href="" class="decnone">view</a>
+                <h1>5</h1><br>
+                <a href="" class="decnone">view</a>
               </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4  h-25 px-2 ">
+            <div class="card text-center">
+              <div class="card-header bg-success">
+                <small>Student</small>
               </div>
+              <div class="card-body bg-success">
+                <h1>25</h1><br>
+                <a href="" class="decnone">view</a>
               </div>
-
-
-          <div class="col-sm-3 ">
-          <div class="card text-center">
-          <div class="card-header bg-success">
-          <small> card 2</small>           
-          </div>
-          <div class="card-body bg-success">     
-          <h1>25</h1><br>
-          <a href="" class="decnone">view</a>      
-          </div>
-          </div>
+            </div>
           </div>
 
-        <div class="col-sm-3 ">        
-        <div class="card text-center bg-info">
-        <div class="card-header">
-        <small> card 2</small>      
-        </div>
-        <div class="card-body bg-info">  
-        <h1>20</h1><br>
-        <a href="" class="decnone">view</a>      
-        </div>
-        </div>
+          <div class="col-sm-4  h-25 px-2">
+            <div class="card text-center bg-info">
+              <div class="card-header">
+                <small> Sold</small>
+              </div>
+              <div class="card-body bg-info">
+                <h1>20</h1><br>
+                <a href="" class="decnone">view</a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
+<br>
+<div class="table row my-5">
+  <table class="">
+    <tr>
+    <th>Order ID</th>
+    <th>Course ID</th>
+    <th>Student E-mail</th>
+    <th>Order Date</th>
+    <th>Amout</th>
+    <th>Action</th>
+  </tr>
+  <tr class="my-5">
+    <td>22</td>
+    <td>100</td>
+    <td>sonam@gmail.com</td>
+    <td>20/10/2023</td>
+    <td>2000</td>
+    <td><i class="fa-solid fa-trash-can"></i></td>
+  </tr>
+  <tr class="my-5">
+    <td>23</td>
+    <td>101</td>
+    <td>anju@gmail.com</td>
+    <td>20/10/2023</td>
+    <td>2000</td>
+    <td><i class="fa-solid fa-trash-can"></i></td>
+  </tr>
+  </table>
+</div>
 
-        ';
-      }
 
-      ?>
 
+      </div>
+
+      ';
+    }
+    else{
+      echo "you are log out";
+        }
+    ?>
 
 
 

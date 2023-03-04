@@ -39,9 +39,14 @@ transform: scale(1.1);
     top: 3vh;
     left: 3vh;
 }
-/* #lgbtnn{
-    position: relative;
-    left: 105vh;
-    top: 1.5vh;
-    height: 4.2vh;
-} */
+.dashorder{
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursi;
+    font-size: 2vh;
+    background-color: rgb(126, 120, 120);
+    color: white;
+    border-radius: 5px;
+
+    justify-content: center;
+    margin-top:2vh;
+}

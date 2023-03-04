@@ -42,7 +42,7 @@ session_start();
                 <nav class="sidebar-sticky">
                   <ul class="nav my-5 ">
                     <li class="nav-item ">
-                      <a class="decnone" href="./admindash/dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
+                      <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
                       <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
