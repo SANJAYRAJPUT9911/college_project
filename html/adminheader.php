@@ -31,38 +31,46 @@ session_start();
     </div>
   </div>
 
-  <div class="container-fluid ">
+  <div class="container ">
     <div class="row my-5">
 
+    <?php 
+      if(isset($_SESSION['admin_login'])){
+       echo 
+       
+       '
+      <div class="col-sm-3 ">
+        <nav class="sidebar-sticky ">
+          <ul class="nav my-5 ">
+            <li class="nav-item ">
+              <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
+              <a class="decnone" href="./admincourse.php"><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-chart-simple"></i> Sell Report</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-brands fa-paypal"></i> Payment Status</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-comment"></i> Feedback</a><br><br><br>
+              <a class="decnone" href=""><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
+              <a class="decnone" href="" id="lgbtnn"><i class="fa-solid fa-right-from-bracket"></i>
+                Logout</a><br><br><br>
+            </li>
+          </ul>
+        </nav>
 
-<?php 
-              if (isset($_SESSION["admin_login"])) {
+      </div>
 
-                echo ' <div class="col-sm-3  m-3 px-5 ">
-                <nav class="sidebar-sticky">
-                  <ul class="nav my-5 ">
-                    <li class="nav-item ">
-                      <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-chart-simple"></i> Sell Report</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-brands fa-paypal"></i> Payment Status</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-comment"></i> Feedback</a><br><br><br>
-                      <a class="decnone" href=""><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
-                      <a class="decnone" href="" id="lgbtnn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a><br><br><br>
-                    </li>
-                  </ul>
-                </nav>
-        
-        
-        
-        
-        
-              </div>
+      <div class="col-sm-9 ">
+
+
+
+
+       
         ';
 
 
               }
 
 ?>
+
+
+

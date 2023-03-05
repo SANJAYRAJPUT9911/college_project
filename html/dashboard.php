@@ -111,10 +111,12 @@ if(! isset ($_SESSION)){
           </div>
 
         </div>
-
-<br>
-<div class="table row my-5">
-  <table class="">
+   <div class="dashorder">
+   table order
+   </div>
+   <br>
+   <div class="table row my-3">
+   <table class="">
     <tr>
     <th>Order ID</th>
     <th>Course ID</th>
@@ -122,28 +124,25 @@ if(! isset ($_SESSION)){
     <th>Order Date</th>
     <th>Amout</th>
     <th>Action</th>
-  </tr>
-  <tr class="my-5">
+   </tr>
+   <tr class="my-5">
     <td>22</td>
     <td>100</td>
     <td>sonam@gmail.com</td>
     <td>20/10/2023</td>
     <td>2000</td>
     <td><i class="fa-solid fa-trash-can"></i></td>
-  </tr>
-  <tr class="my-5">
+   </tr>
+   <tr class="my-5">
     <td>23</td>
     <td>101</td>
     <td>anju@gmail.com</td>
     <td>20/10/2023</td>
     <td>2000</td>
     <td><i class="fa-solid fa-trash-can"></i></td>
-  </tr>
-  </table>
-</div>
-
-
-
+   </tr>
+   </table>
+   </div>
       </div>
 
       ';
@@ -153,10 +152,7 @@ if(! isset ($_SESSION)){
         }
     ?>
 
-
-
-
-
+</div>
 
       <!-- font awesone js -->
       <script src="../js/adminawesfont.js"></script>
