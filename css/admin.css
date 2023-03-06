@@ -50,3 +50,20 @@ transform: scale(1.1);
     justify-content: center;
     margin-top:2vh;
 }
+.add{
+    transform: scale(3);
+    display: flex;
+    position: relative;
+    left: 100vh;
+    top: 30vh;
+    height: 3vh;
+    width: 2vh;
+
+}
+.cform{
+    padding: 3vh;
+    background-color: rgba(230,237,240,255);
+    border-radius: 8px;
+    height:100%;
+    width: 60%;
+}

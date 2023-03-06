@@ -92,7 +92,10 @@ List of courses
  ?>
 
 
+<div class="add ">  <a href="./addcourse.php"><i class="fa-solid fa-plus"></i></a>  
+</div>
 
+<!-- <i class="fa-solid fa-plus"></i> -->
 
 <?php
 include("./adminfooter.php");
