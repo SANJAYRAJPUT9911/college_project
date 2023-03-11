@@ -191,7 +191,7 @@ $(document).ready(()=>{
 
                 }
                 else {
-                    null;
+                    alert("please enter valid id , password");
                 }
             }
         })
