@@ -1,28 +1,28 @@
 //    AJAX FOR CONTACT FORM TO SQL DATABASE 
-$(document).ready(function () {
-    $("#formsubmit").click((event) => {
-        event.preventDefault();
+// $(document).ready(function () {
+//     $("#formsubmit").click((event) => {
+//         event.preventDefault();
 
-        let cusname = $('#cusname').val();
-        let cusemail = $("#cusmail").val();
-        let cusphone = $("#cusphone").val();
-        let cuscomment = $("#cuscomment").val();
-
-
-        let mydata = { name: cusname, email: cusemail, phone: cusphone, comment: cuscomment };
-        $.ajax({
-            url: "./html/contactinfo.php",
-            method: "POST",
-            data: JSON.stringify(mydata),
-            success: (data) => {
-                $("#contactform")[0].reset();
-
-            }
-        })
+//         let cusname = $('#cusname').val();
+//         let cusemail = $("#cusmail").val();
+//         let cusphone = $("#cusphone").val();
+//         let cuscomment = $("#cuscomment").val();
 
 
-    })
-})
+//         let mydata = { name: cusname, email: cusemail, phone: cusphone, comment: cuscomment };
+//         $.ajax({
+//             url: "./html/contactinfo.php",
+//             method: "POST",
+//             data: JSON.stringify(mydata),
+//             success: (data) => {
+//                 $("#contactform")[0].reset();
+
+//             }
+//         })
+
+
+//     })
+// })
 
 // AJAX FOR SIGNUP FORM TO SQL DATABASE
 

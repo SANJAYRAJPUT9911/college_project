@@ -1,5 +1,7 @@
 <?php
 include("./adminheader.php");
+
+
 ?>
 
 
@@ -27,54 +29,50 @@ $result=$conn->query($sql);
 // </tr>
 
 // }
-
-if(isset($_SESSION["admin_login"])){
 echo'<div class="dashorder">
 List of courses
-</div>
+</div>';
 
-<div class="table row my-5">
-<table class="">
+if(isset($_SESSION["admin_login"])){
+    echo'
+    
+    <div class=" row my-5">
+    <table class="table" id="table_id">
+    
+    <thead>
+
     <tr>
-        <th>Course ID</th>
-        <th>Name</th>
-        <th>Author</th>
-        <th>Action</th>
+   <th>Course ID</th>
+    <th>Name</th>
+    <th>Author</th>      
+    <th>Action</th>
+    </tr>
 
-    </tr>';
-   
+    </thead>
+    
+    ';
+    
+    
+        while($rows=$result->fetch_assoc()) {
 
-
-
-
-while($rows=$result->fetch_assoc()) {
-    echo' 
+            echo'
+     
  
- <tr class="my-5">
+     <tbody>
+
+     <tr class="my-5">
         <td>'.$rows['course_id'].'</td>
         <td>'.$rows['course_name'].'</td>
         <td>'.$rows['course_author'].'</td>
         <td><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash-can"></i>
         </td>
     </tr>
+    </tbody>
   
 </table>
 </div>
 ';
 }   
-
-//  echo' 
- 
-//  <tr class="my-5">
-//         <td>22</td>
-//         <td>sonam</td>
-//         <td>sanjay leela bansali</td>
-//         <td><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash-can"></i>
-//         </td>
-//     </tr>
-// </table>
-// </div>
-// ';
 
 
 
@@ -86,6 +84,10 @@ while($rows=$result->fetch_assoc()) {
 </div>
 
 <!-- <i class="fa-solid fa-plus"></i> -->
+
+
+
+
 
 <?php
 include("./adminfooter.php");
