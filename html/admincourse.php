@@ -9,77 +9,83 @@ include("./adminheader.php");
 
 <?php
 
-
+// code for adding course 
 
 include("./connection.php");
 
 $sql="SELECT * FROM `coursedetail`";
 $result=$conn->query($sql);
-// $rows=$result->fetch_assoc();
 
-// print_r($rows);
 
-// while($rows==true){
-//     <tr class="my-5">
-//     <td>.$_rows['course_id'].</td>
-//     <td>.$_rows['course_name'].</td>
-//     <td>.$_rows['course_author'].</td>
-//     <td><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash-can"></i>
-//     </td>
-// </tr>
-
-// }
-echo'<div class="dashorder">
+echo'<div class="dashorder my-5">
 List of courses
 </div>';
 
-if(isset($_SESSION["admin_login"])){
-    echo'
-    
-    <div class=" row my-5">
-    <table class="table" id="table_id">
-    
-    <thead>
-
+echo'<table id="table_id" class="display">
+<thead>
     <tr>
-   <th>Course ID</th>
-    <th>Name</th>
-    <th>Author</th>      
-    <th>Action</th>
+        <th>Course ID</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Action</th>
     </tr>
+</thead>
+<tbody>';
 
-    </thead>
-    
-    ';
-    
-    
-        while($rows=$result->fetch_assoc()) {
+while($rows=$result->fetch_assoc())
 
-            echo'
-     
- 
-     <tbody>
+{
+//    code for showing the table with table data
+echo'
+    <tr>
+        <td>'.$rows["course_id"].'</td>
+        <td>'.$rows["course_name"].'</td>  
+        <td>'.$rows["course_author"].'</td>
+        <td>
+        
+        <form action="none" class="d-inline" method="post">
+        <button class="btn btn-success">
+        <i class="fa-solid fa-pen-to-square"> </i>
+        </button>
+        </form>
+      
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
 
-     <tr class="my-5">
-        <td>'.$rows['course_id'].'</td>
-        <td>'.$rows['course_name'].'</td>
-        <td>'.$rows['course_author'].'</td>
-        <td><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash-can"></i>
+        <form action="" class="d-inline" method="post">
+        <input type="hidden" name="id" value='.$rows['course_id'].'>
+        <button name="delete" class="btn btn-danger">
+        <i class="fa-solid fa-trash-can"></i>
+        </button>
+        </form>
+      
+        
         </td>
-    </tr>
-    </tbody>
-  
-</table>
-</div>
-';
-}   
+    </tr>';
 
+}
+   echo'
+</tbody>
+</table>';
 
+//  code for delete data from mysql table
 
+if(isset($_REQUEST['delete'])){
+
+    $sql="DELETE FROM `coursedetail` WHERE `course_id`={$_REQUEST['id']}";
+
+  if( $conn->query($sql)==true )  {
+    echo '  <meta http-equiv="refresh" content="30">
+    ';
+  }else{
+    echo'unable to delete data';
+  }
 }
  ?>
 
+ 
 
+<!-- add course icon -->
 <div class="add ">  <a href="./addcourse.php"><i class="fa-solid fa-plus"></i></a>  
 </div>
 

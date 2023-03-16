@@ -39,7 +39,7 @@ $conn= new mysqli($db_host,$db_username,$db_password,$db_dbname);
       
       if(isset($_REQUEST['submitbtncourse'])){
 
-        if(($_REQUEST['coursename']=="")||($_REQUEST['coursedisc']=="")||($_REQUEST['author']=="")||($_REQUEST['courseduration']=="")||($_REQUEST['courseoriginalprice']=="")||($_REQUEST['coursesellingprice']=="")||$_FILES['courseimage']==""){
+        if(($_REQUEST['coursename']=="")||($_REQUEST['coursedisc']=="")||($_REQUEST['author']=="")||($_REQUEST['courseduration']=="")||($_REQUEST['courseoriginalprice']=="")||($_REQUEST['coursesellingprice']=="")||$_FILES['courseimage']==null){
 
          $msg="please fill all the details properly";
           
@@ -76,10 +76,11 @@ $conn= new mysqli($db_host,$db_username,$db_password,$db_dbname);
          
           if($conn->query($sql)== true){
 
-            // $msg="details saved successfully";
+            $msg="<small style=background-color:#b0e9b0;'>details saved sucessfully</small>";
+          }else{
+
+            $msg="<small style=background-color:#e78072;'>something went wrong</small>";
           }
-          
-          // echo $originalname;
         }
       
       }
