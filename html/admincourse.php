@@ -43,8 +43,10 @@ echo'
         <td>'.$rows["course_author"].'</td>
         <td>
         
-        <form action="none" class="d-inline" method="post">
-        <button class="btn btn-success">
+        <form action="./editcourse.php" class="d-inline" method="post">
+        <input type="hidden" name="edit_id" value='.$rows['course_id'].'>
+
+        <button class="btn btn-success" name="edit">
         <i class="fa-solid fa-pen-to-square"> </i>
         </button>
         </form>

@@ -8,24 +8,6 @@ $db_dbname="addcourse";
 
 $conn= new mysqli($db_host,$db_username,$db_password,$db_dbname);
 
-
-// if(isset($_REQUEST['submitbtncourse'])){
-
-//   if(($_REQUEST['coursename']=="")){
-    
-//   }
-//   $course_name=$_REQUEST['coursename'];
-
-//   $sql="INSERT INTO coursedetail (course_name) VALUES `$course_name`";
-//   if( $conn->query($sql) == TRUE){
-//     echo "success";
-//   }
-//   else{
-//     echo "error occure";
-//   }
-
-// }
-
 ?>
 
 <div class="cform">
@@ -115,7 +97,6 @@ $conn= new mysqli($db_host,$db_username,$db_password,$db_dbname);
     
 <button id="submitbtncourse" class="btn btn-secondary" name="submitbtncourse" >submit</button>
 
-    <!-- <a href="" id="submitbtncours" name="submitbtncourse" class="btn btn-secondary">SUBMIT</a> -->
     <a href="./admincourse.php" class="btn btn-danger">CLOSE</a>
     <?php
 
