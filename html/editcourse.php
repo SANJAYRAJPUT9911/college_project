@@ -15,7 +15,7 @@ if (isset($_REQUEST['edit'])) {
 
   $sql = "SELECT * FROM `coursedetail` WHERE `course_id`={$_REQUEST['edit_id']}";
   $result = $conn->query($sql);
-  $row = $result->fetch_assoc();  
+  $row = $result->fetch_assoc();
 }
 ?>
 
@@ -24,47 +24,47 @@ if (isset($_REQUEST['edit'])) {
 <div class="cform">
   <div class="text-center my-3">Edit existing course</div>
   <form class=" " method="POST" enctype="multipart/form-data">
-  <div class="mb-3" style="display:none";>
+    <div class="mb-3" style="display:none" ;>
       <label for="" class="form-label">Course id</label>
       <input type="text" name="editid" class="form-control" id="editname" value="<?php if (isset($row['course_id'])) {
-                                                                                echo $row['course_id'];
-                                                                              } ?>">
+                                                                                    echo $row['course_id'];
+                                                                                  } ?>">
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Course Name</label>
       <input type="text" name="editname" class="form-control" id="editname" value="<?php if (isset($row['course_name'])) {
-                                                                                echo $row['course_name'];
-                                                                              } ?>">
+                                                                                      echo $row['course_name'];
+                                                                                    } ?>">
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Course Discription</label>
       <textarea class="form-control" name="editdisc" id=""><?php if (isset($row['course_discription'])) {
-                                                                echo $row['course_discription'];
-                                                              } ?></textarea>
+                                                              echo $row['course_discription'];
+                                                            } ?></textarea>
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Author</label>
       <input type="text" name="editauthor" class="form-control" id="" value="<?php if (isset($row['course_author'])) {
-                                                                            echo $row['course_author'];
-                                                                          } ?>">
+                                                                                echo $row['course_author'];
+                                                                              } ?>">
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Course Duration</label>
       <input type="text" name="editcourseduration" class="form-control" id="" value="<?php if (isset($row['course_duration'])) {
-                                                                                    echo $row['course_duration'];
-                                                                                  } ?>">
+                                                                                        echo $row['course_duration'];
+                                                                                      } ?>">
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Course Original Price</label>
       <input type="text" name="editcourseoriginalprice" class="form-control" id="" value="<?php if (isset($row['course_original_price'])) {
-                                                                                        echo $row['course_original_price'];
-                                                                                      } ?>">
+                                                                                            echo $row['course_original_price'];
+                                                                                          } ?>">
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Course Selling Price</label>
       <input type="text" name="editcoursesellingprice" class="form-control" id="" value="<?php if (isset($row['course_selling_price'])) {
-                                                                                        echo $row['course_selling_price'];
-                                                                                      } ?>">
+                                                                                            echo $row['course_selling_price'];
+                                                                                          } ?>">
     </div>
 
     <div class="mb-3">
@@ -88,8 +88,8 @@ if (isset($_REQUEST['edit'])) {
 
       $msg = "please fill all the details properly";
     } else {
-    
-      $id=$_REQUEST['editid'];
+
+      $id = $_REQUEST['editid'];
       $coursename = $_REQUEST['editname'];
       $coursedisc = $_REQUEST['editdisc'];
       $author = $_REQUEST['editauthor'];
@@ -102,7 +102,7 @@ if (isset($_REQUEST['edit'])) {
       // move_uploaded_file($tmpimage,"../images/".$originalname);
 
 
-  
+
 
 
       //  for compressing file upto 50% of its size
@@ -114,8 +114,8 @@ if (isset($_REQUEST['edit'])) {
         imagejpeg($created_image, "../images/" . $originalname, 50);
       }
 
-      
-      $sql="UPDATE `coursedetail` SET `course_name`='$coursename',`course_discription`='$coursedisc',`course_author`='$author',`course_duration`='$courseduration',`course_original_price`='$courseoriginalprice',`course_selling_price`='$coursesellingprice',`course_image`='../images/$originalname'  WHERE `course_id`='$id'";
+
+      $sql = "UPDATE `coursedetail` SET `course_name`='$coursename',`course_discription`='$coursedisc',`course_author`='$author',`course_duration`='$courseduration',`course_original_price`='$courseoriginalprice',`course_selling_price`='$coursesellingprice',`course_image`='../images/$originalname'  WHERE `course_id`='$id'";
 
       if ($conn->query($sql) == true) {
 

@@ -54,7 +54,7 @@ $(document).ready(function () {
 
 
 
-//  keypress blur function to check email is valid or not
+//  keypress signup form blur function to check email is valid or not
 
 $(document).ready(() => {
     $('#inputemail').on('keypress blur ', () => {
