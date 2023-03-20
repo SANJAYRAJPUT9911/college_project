@@ -54,7 +54,7 @@ $conn= new mysqli($db_host,$db_username,$db_password,$db_dbname);
 
 // inserting data into the mysql
 
-          $sql= "INSERT INTO `coursedetail`(`course_name`,`course_discription`,`course_author`,`course_duration`,`course_original_price`,`course_selling_price`,`course_image`) VALUES ('$coursename','$coursedisc','$author','$courseduration','$courseoriginalprice','$coursesellingprice','../images/.$originalname')";   
+          $sql= "INSERT INTO `coursedetail`(`course_name`,`course_discription`,`course_author`,`course_duration`,`course_original_price`,`course_selling_price`,`course_image`) VALUES ('$coursename','$coursedisc','$author','$courseduration','$courseoriginalprice','$coursesellingprice','../images/$originalname')";   
          
           if($conn->query($sql)== true){
 
