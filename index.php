@@ -282,12 +282,9 @@ if(! isset ($_SESSION)){
         </div>
 
         <div class="carousel-item item">
-          <div class="img-box"><img src="images/new.jpeg" class="d-block w-100" alt=""></div>
+          <div class="img-box"><img src="images/nw.jpeg" class="d-block w-100" alt=""></div>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Anju Yadav</h5>
-            <small>Nakchadi Bandariya</small>
-            <p>A Highly Intelligent Girl . Easy To Make Her Angry And Difficult To Understand And Impossible To Change Her Decision But Only For The Person Who Dont Know Her.
-            </p>
+          
           </div>
         </div>
 

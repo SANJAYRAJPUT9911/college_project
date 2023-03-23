@@ -53,11 +53,11 @@ if(! isset ($_SESSION)){
               <a class="decnone" href="./dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a><br><br><br>
               <a class="decnone" href="./admincourse.php"><i class="fa-solid fa-bars"></i> Courses</a><br><br><br>
               <a class="decnone" href=""><i class="fa-solid fa-person-chalkboard"></i> Lessons</a><br><br><br>
-              <a class="decnone" href=""><i class="fa-solid fa-school"></i> Students</a><br><br><br>
+              <a class="decnone" href="./student.php"><i class="fa-solid fa-school"></i> Students</a><br><br><br>
               <a class="decnone" href=""><i class="fa-solid fa-chart-simple"></i> Sell Report</a><br><br><br>
               <a class="decnone" href=""><i class="fa-brands fa-paypal"></i> Payment Status</a><br><br><br>
               <a class="decnone" href=""><i class="fa-solid fa-comment"></i> Feedback</a><br><br><br>
-              <a class="decnone" href=""><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
+              <a class="decnone" href="./adminpassword.php"><i class="fa-solid fa-key"></i> Change Password</a><br><br><br>
               <a class="decnone" href="" id="lgbtnn"><i class="fa-solid fa-right-from-bracket"></i>
                 Logout</a><br><br><br>
             </li>

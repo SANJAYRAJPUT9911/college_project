@@ -2,37 +2,38 @@
 include("./adminheader.php");
 
 
-?>
+$db_host = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_dbname = "signupform";
 
+$conn = new mysqli($db_host, $db_username, $db_password, $db_dbname);
+
+?>
 
 
 
 <?php
 
 // code for adding course 
-
-include("./connection.php");
-
-
-if(isset($_SESSION['admin_login']))
-{
+if(isset($_SESSION['admin_login'])){
 
 
-
-$sql="SELECT * FROM `coursedetail`";
+$sql="SELECT * FROM `signupdetails`";
 $result=$conn->query($sql);
 
 
 echo'<div class="dashorder my-5">
-List of courses
+Student Details
 </div>';
 
 echo'<table id="table_id" class="display">
 <thead>
     <tr>
-        <th>Course ID</th>
+        <th>Student Id</th>
         <th>Name</th>
-        <th>Author</th>
+        <th>E-mail</th>
+        <th>Password</th>
         <th>Action</th>
     </tr>
 </thead>
@@ -44,15 +45,17 @@ while($rows=$result->fetch_assoc())
 //    code for showing the table with table data
 echo'
     <tr>
-        <td>'.$rows["course_id"].'</td>
-        <td>'.$rows["course_name"].'</td>  
-        <td>'.$rows["course_author"].'</td>
+        <td>'.$rows["userid"].'</td>
+        <td>'.$rows["name"].'</td>  
+        <td>'.$rows["useremail"].'</td>
+        <td>'.$rows["userpassword"].'</td>
+
         <td>
         
-        <form action="./editcourse.php" class="d-inline" method="post">
-        <input type="hidden" name="edit_id" value='.$rows['course_id'].'>
+        <form action="./editstudent.php" class="d-inline" method="post">
+        <input type="hidden" name="studentid" value='.$rows['userid'].'>
 
-        <button class="btn btn-success" name="edit">
+        <button class="btn btn-success" name="student">
         <i class="fa-solid fa-pen-to-square"> </i>
         </button>
         </form>
@@ -61,8 +64,8 @@ echo'
         &nbsp;&nbsp;&nbsp;&nbsp;
 
         <form action="" class="d-inline" method="post">
-        <input type="hidden" name="id" value='.$rows['course_id'].'>
-        <button name="delete" class="btn btn-danger">
+        <input type="hidden" name="id" value='.$rows['userid'].'>
+        <button name="stdelete" class="btn btn-danger">
         <i class="fa-solid fa-trash-can"></i>
         </button>
         </form>
@@ -75,13 +78,14 @@ echo'
    echo'
 </tbody>
 </table>';
+
 }
 
 //  code for delete data from mysql table
 
-if(isset($_REQUEST['delete'])){
+if(isset($_REQUEST['stdelete'])){
 
-    $sql="DELETE FROM `coursedetail` WHERE `course_id`={$_REQUEST['id']}";
+    $sql="DELETE FROM `signupdetails` WHERE `userid`={$_REQUEST['id']}";
 
   if( $conn->query($sql)==true )  {
     echo '  <meta http-equiv="refresh" content="0">
@@ -95,10 +99,11 @@ if(isset($_REQUEST['delete'])){
  
 
 <!-- add course icon -->
-<div class="add ">  <a href="./addcourse.php"><i class="fa-solid fa-plus"></i></a>  
+<div class="add ">  <a href="./addstudent.php"><i class="fa-solid fa-plus"></i></a>  
 </div>
 
 <!-- <i class="fa-solid fa-plus"></i> -->
+
 
 
 

@@ -8,6 +8,38 @@ $db_dbname = "admin";
 $conn = new mysqli($db_host, $db_username, $db_password, $db_dbname);
 ?>
 
+<?php
+if(isset($_SESSION['admin_login'])){
+    echo'
+    <div class="dashorder my-5">
+        change current password
+    </div>
+    
+    <div class="col-sm-6">
+    
+        <form action="" method="post">
+    
+            <div class="mb-3 ">
+                <label for="" class="form-label">current password</label>
+                <input type="text" name="cpass" class="form-control" id="cpass">
+              
+            </div>
+    
+            <div class="mb-3">
+                <label for="" class="form-label">new password</label>
+                <input type="password" name="npass" class="form-control" id="npass">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Renter new password</label>
+                <input type="password" name="enpass" class="form-control" id="enpass">
+            </div>
+            <button id="submitbtncourse" class="btn btn-success" name="submitnpass">submit</button>
+    
+            <a href="./adminpage.php" class="btn btn-danger">CLOSE</a>
+    ';
+}
+?>
+<!-- 
 <div class="dashorder my-5">
     change current password
 </div>
@@ -32,7 +64,7 @@ $conn = new mysqli($db_host, $db_username, $db_password, $db_dbname);
         </div>
         <button id="submitbtncourse" class="btn btn-success" name="submitnpass">submit</button>
 
-        <a href="./adminpage.php" class="btn btn-danger">CLOSE</a>
+        <a href="./adminpage.php" class="btn btn-danger">CLOSE</a> -->
 
         <?php
         if (isset($_REQUEST['submitnpass'])) {
