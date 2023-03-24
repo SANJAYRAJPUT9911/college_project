@@ -67,3 +67,7 @@ transform: scale(1.1);
     height:100%;
     width: 60%;
 }
+.adlesson{
+    position: relative;
+    left: 50vh;
+}
