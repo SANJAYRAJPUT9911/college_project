@@ -87,10 +87,12 @@ echo'
 
         <td>
         
-        <form action="./editstudent.php" class="d-inline" method="post">
-        <input type="hidden" name="" value='.$rows['lesson_id'].'>
+        <form action="./editlesson.php" class="d-inline" method="post">
+        <input type="hidden" name="lid" value='.$rows['lesson_id'].'>
+        <input type="hidden" name="scid" value='.$_REQUEST['s_cid'].'>
 
-        <button class="btn btn-success" name="student">
+
+        <button class="btn btn-success" name="editlesson">
         <i class="fa-solid fa-pen-to-square"> </i>
         </button>
         </form>
