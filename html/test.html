@@ -1,0 +1,30 @@
+echo'
+    <tr>
+        <td>'.$result_lesson["lesson_id"].'</td>
+        <td>'.$result_lesson["lesson_name"].'</td>  
+        <td>'.$result_lesson["lesson_desc"].'</td>
+        <td>'.$result_lesson["lesson_link"].'</td>
+
+        <td>
+        
+        <form action="./editstudent.php" class="d-inline" method="post">
+        <input type="hidden" name="studentid" value='.$result_lesson['lesson_id'].'>
+
+        <button class="btn btn-success" name="student">
+        <i class="fa-solid fa-pen-to-square"> </i>
+        </button>
+        </form>
+      
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <form action="" class="d-inline" method="post">
+        <input type="hidden" name="id" value='.$result_lesson['lesson_id'].'>
+        <button name="stdelete" class="btn btn-danger">
+        <i class="fa-solid fa-trash-can"></i>
+        </button>
+        </form>
+      
+        
+        </td>
+    </tr>';

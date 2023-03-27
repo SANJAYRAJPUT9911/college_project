@@ -86,7 +86,7 @@ if (isset($_REQUEST['edit'])) {
 
     if (($_REQUEST['editname'] == "") || ($_REQUEST['editdisc'] == "") || ($_REQUEST['editauthor'] == "") || ($_REQUEST['editcourseduration'] == "") || ($_REQUEST['editcourseoriginalprice'] == "") || ($_REQUEST['editcoursesellingprice'] == "") || $_FILES['editcourseimage'] == null) {
 
-      $msg = "please fill all the details properly";
+      echo "please fill all the details properly";
     } else {
 
       $id = $_REQUEST['editid'];
@@ -119,10 +119,10 @@ if (isset($_REQUEST['edit'])) {
 
       if ($conn->query($sql) == true) {
 
-        $msg = "<small style=background-color:#b0e9b0;'>details saved sucessfully</small>";
+        echo "<small style=background-color:#b0e9b0;'>details saved sucessfully</small>";
       } else {
 
-        $msg = "<small style=background-color:#e78072;'>something went wrong</small>";
+        echo "<small style=background-color:#e78072;'>something went wrong</small>";
       }
     }
   }
