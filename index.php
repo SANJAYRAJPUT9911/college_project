@@ -71,7 +71,7 @@ if(! isset ($_SESSION)){
 
           if ( isset( $_SESSION['is_login'])) {
             echo '  <li class="nav-item">
-            <a class="nav-link white" href="#">My Profile</a>
+            <a class="nav-link white" href="./html/profile.php">My Profile</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link white " id="logoutbtn" href="#">Logout</a>
@@ -121,8 +121,7 @@ if(! isset ($_SESSION)){
         <span class="fontubuntu">Think out of the box</span><br>
         <?php
         if(isset($_SESSION['is_login'])){
-          echo ''
-        ;
+          echo '<a href="./html/profile.php" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">My Profile</a>';
 
         }
         else{
@@ -169,7 +168,7 @@ if(! isset ($_SESSION)){
 
               <div class="card-footer d-flex justify-content-between pt-3">
                 <span class="pricetag">$ 400/-</span>
-                <a href="#" class="btn btn-primary enrolbtn">Enroll</a>
+                <a href="./PaytmKit/test.php" class="btn btn-primary enrolbtn">Enroll</a>
               </div>
 
             </div>

@@ -24,6 +24,7 @@
 //     })
 // })
 
+
 // AJAX FOR SIGNUP FORM TO SQL DATABASE
 
 
@@ -108,7 +109,7 @@ $(document).ready(() => {
 
 
 
-// AJAX FOR LOGIN FORM TO SQL DATABASE
+// AJAX FOR student4 LOGIN FORM TO SQL DATABASE
 
 $(document).ready(function () {
     $("#loginbtn").click(() => {
@@ -222,7 +223,22 @@ $(document).ready(() => {
     })
 })
 
+// CODE FOR THE MY PROFILE PAGE LOGOUT BUTTON
 
+$(document).ready(() => {
+    $("#logoutbtn").click(() => {
+
+        $.ajax({
+            url: "./html/logout.php",
+            method: "POST",
+            success: (data) => {
+                if (data == 0) {
+                    window.location.assign("./index.php");
+                }
+            }
+        })
+    })
+})
 
 
 

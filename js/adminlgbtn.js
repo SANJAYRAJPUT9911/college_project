@@ -3,7 +3,7 @@
 
 $(document).ready(() => {
     $("#lgbtnn").click((event) => {
-        event.preventDefault();
+        // event.preventDefault();
         console.log('log out button ');
 
         $.ajax({
